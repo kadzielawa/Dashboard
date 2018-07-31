@@ -1,0 +1,184 @@
+<style>
+    #jackets,#snowboard,#shoes {
+        display:none;
+    }
+
+    button {
+        margin:20px;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+
+
+
+       $("#buttJackets").on('click',function(){
+            $("#jackets").toggle();
+       });
+        $("#buttShoes").on('click',function(){
+            $("#shoes").toggle();
+        });
+        $("#buttSnowboard").on('click',function(){
+            $("#snowboard").toggle();
+        });
+
+
+        $('.add_to_cart').on('click',function(){
+            var parent = $(this).parent().parent().parent().attr('id');
+            var name = $(this).parent().parent().find('.product-info').find('h5').text();
+            var price = $(this).parent().parent().find('.product-info').find('h6').text();
+            var data = {
+                'element':$(this).attr('class'),
+                'text':name,
+                'price':price,
+                'id': 213,
+                'category': parent,
+                'event':'click-product'
+            };
+            _comgy.pass(data);
+        })
+    });
+</script>
+
+<h1>Shop online</h1>
+
+<h2>Kategorie</h2>
+<div style="float:left;">
+    <ul>
+        <li>
+            <button id="buttJackets">Kurtki</button>
+        </li>
+        <li>
+
+            <button id="buttSnowboard">Deski</button>
+        </li>
+
+        <li>
+
+            <button id="buttShoes">Buty</button>
+        </li>
+
+    </ul>
+</div>
+
+
+<section class="products">
+
+
+    <div id="jackets">
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
+        </div>
+        <div class="product-info">
+            <h5>Kurtka nr. 1</h5>
+            <h6>$21.99</h6>
+        </div>
+        <div>
+            <button class="add_to_cart">add to cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
+        </div>
+        <div class="product-info">
+            <h5>Kurtka nr. 2</h5>
+            <h6>$45.11</h6>
+        </div>
+        <div>
+            <button class="add_to_cart">add to cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
+        </div>
+        <div class="product-info">
+            <h5>Kurtka nr. 3</h5>
+            <h6>$4</h6>
+        </div>
+        <div>
+            <button class="add_to_cart">add to cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
+        </div>
+        <div class="product-info">
+            <h5>Kurtka nr. 4</h5>
+            <h6>$19.99</h6>
+        </div>
+        <div>
+            <button class="add_to_cart">add to cart</button>
+        </div>
+    </div>
+
+    </div>
+
+    <div id="snowboard">
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKkiZB3Mh3DIUM1Ihux3iCrfm6l8xMoeYi80-zPZLexxW5XPsR">
+            </div>
+            <div class="product-info">
+                <h5>Deska 1</h5>
+                <h6>$111.99</h6>
+            </div>
+            <div>
+                <button class="add_to_cart">add to cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKkiZB3Mh3DIUM1Ihux3iCrfm6l8xMoeYi80-zPZLexxW5XPsR">
+            </div>
+            <div class="product-info">
+                <h5>Deska snowboard 2</h5>
+                <h6>$55.00</h6>
+            </div>
+            <div>
+                <button class="add_to_cart">add to cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="shoes">
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://selectshop.pl/modpub/_rselectshop/product/medium/102017/200051-4acc5a.jpg">
+            </div>
+            <div class="product-info">
+                <h5>Buty snowboard 1 </h5>
+                <h6>$41.92</h6>
+            </div>
+            <div>
+                <button class="add_to_cart">add to cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://selectshop.pl/modpub/_rselectshop/product/medium/102017/200051-4acc5a.jpg">
+            </div>
+            <div class="product-info">
+                <h5>Buty snowboard 2</h5>
+                <h6>$51.11</h6>
+            </div>
+            <div>
+                <button class="add_to_cart">add to cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>

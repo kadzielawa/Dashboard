@@ -1,0 +1,21 @@
+
+<h1>Weather</h1>
+<div class="row">
+    <div class="col-md-5 col-sm-5 col-xs-12">
+        <span>Wpisz miasto dla którego chcesz wyświetlić aktualną prognozę pogody...</span>
+        <div class="search">
+            <input class="form-control" id="input-search-weather" type="text" placeholder="Szukaj miasta...">
+            <button id="btn-search-weather" type="button" class="btn btn-default">Szukaj</button>
+        </div>
+</div>
+<div class="col-xs-12" id="weatherResult">
+</div>
+<script id="weatherTemplate" type="text/x-jsrender">
+    <h2>Miejsce: {{:place}}</h2>
+    <p>Temperatura: {{:main.temp}} &#8451</p>
+    <p>Temperatura maksymalna: {{:main.temp_max}} &#8451</p>
+    <p>Temperatura minimalna: {{:main.temp_max}} &#8451</p>
+    <p>Zachmurzenie: <img src="http://openweathermap.org/img/w/{{:weather.icon}}.png" /> </p>
+    <p>Predkosc wiatru: {{:wind.speed}} m/s</p>
+	<p>Kierunek wiatru: {{:wind.deg}}</p>
+</script>
